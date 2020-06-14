@@ -5,7 +5,7 @@ The goal is to find the best model that predicts whether or not an individual's 
 
 ## Dataset
 
-The dataset for the project comes from [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Census+Income). It contains small modifications such as removing missing data or some of the variables.
+The dataset for the project comes from [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Census+Income). It was modified a bit by removing missing data and variable `fnlwgt`.
 
 **Size**
 
