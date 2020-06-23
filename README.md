@@ -1,17 +1,38 @@
-# CharityML
+# Finding donors for *CharityML*
 
-In this project I explore supervised learning methods to solve a problem faced by a fictional charity organization, CharityML.
-The goal is to find the best model that predicts whether or not an individual's income is more than $50 000 based on census data.
+In this project I help to find donors for a charity organization.
+
+### Overview
+To solve the problem, I explore supervised learning algorithms. The goal is to find the best model that based on US census data, predicts whether or not an individual's income is more than $50 000.
+
+### Methods
+
+* Logistic regression
+* Naive Bayes classifier
+* Random forest
+
+### Technologies
+
+* Python
+* NumPy
+* Pandas
+* Scikit-learn
+
+## How to use
+
+To take a look at the results, open `finding-donors.html` in a browser.
+
+To see how it works, open the project in a jupyter notebook.
 
 ## Dataset
 
-The dataset for the project comes from [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Census+Income). It was modified a bit by removing missing data and variable `fnlwgt`.
+The dataset for the project comes from [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Census+Income). It was modified a bit by removing missing data and a variable `fnlwgt`.
 
-**Size**
+#### Size
 
 Dataset contains 32 000 observations, each one having 13 features.
 
-**Features**
+#### Features
 - `age`: Age
 - `workclass`: Working Class (Private, Self-emp-not-inc, Self-emp-inc, Federal-gov, Local-gov, State-gov, Without-pay, Never-worked)
 - `education_level`: Level of Education (Bachelors, Some-college, 11th, HS-grad, Prof-school, Assoc-acdm, Assoc-voc, 9th, 7th-8th, 12th, Masters, 1st-4th, 10th, Doctorate, 5th-6th, Preschool)
@@ -26,5 +47,5 @@ Dataset contains 32 000 observations, each one having 13 features.
 - `hours-per-week`: Average Hours Per Week Worked
 - `native-country`: Native Country (United-States, Cambodia, England, Puerto-Rico, Canada, Germany, Outlying-US(Guam-USVI-etc), India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican-Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El-Salvador, Trinadad&Tobago, Peru, Hong, Holand-Netherlands)
 
-**Target Variable**
+#### Target Variable
 - `income`: Income Class (<=50K, >50K)
