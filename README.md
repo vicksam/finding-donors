@@ -1,4 +1,4 @@
-# Finding donors for *CharityML*
+# Finding Donors for *CharityML*
 
 In this project I help to find donors for a charity organization.
 
@@ -14,6 +14,7 @@ To solve the problem, I explore supervised learning algorithms. The goal is to f
 ### Technologies
 
 * Python
+* Matplotlib
 * NumPy
 * Pandas
 * Scikit-learn
