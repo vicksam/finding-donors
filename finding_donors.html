@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>finding-donors</title>
+<title>finding_donors</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13084,8 +13084,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Project">Project<a class="anchor-link" href="#Project">&#182;</a></h2><p>Fictional organization, CharityML has observed that people who donate the organization have income of above $50 000. It needs help in predicting from publicly available info about individuals whether they have such income or not. This will help CharityML to minimize the cost of sending mail while maximizing donation yield.</p>
-<p>The goal of the project is to find and tune the best supervised learning model that will predict income of above $50 000, based on data containing 13 features from US census.</p>
+<h2 id="Project">Project<a class="anchor-link" href="#Project">&#182;</a></h2><p>Fictional organization, CharityML has observed that people who donate to their organization have income of above $50,000. It needs help in predicting from publicly available info about individuals whether they have such income or not. This will help <em>CharityML</em> to minimize the cost of sending mail while maximizing donation yield.</p>
+<p>The goal of the project is to find and tune the best supervised learning model for this problem. It will predict that the person has income of above $50 000, based on 13 features of the person.</p>
 
 </div>
 </div>
@@ -13260,7 +13260,7 @@ Percentage of individuals making more than $50,000: 24.78%
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Featureset exploration</strong></p>
+<p><strong>Feature set exploration</strong></p>
 <ul>
 <li><strong>age</strong>: continuous. </li>
 <li><strong>workclass</strong>: Private, Self-emp-not-inc, Self-emp-inc, Federal-gov, Local-gov, State-gov, Without-pay, Never-worked. </li>
@@ -13284,7 +13284,7 @@ Percentage of individuals making more than $50,000: 24.78%
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="Preparing-the-data">Preparing the data<a class="anchor-link" href="#Preparing-the-data">&#182;</a></h2><h3 id="Transforming-skewed-continuous-features">Transforming skewed continuous features<a class="anchor-link" href="#Transforming-skewed-continuous-features">&#182;</a></h3><p>Some algorithms may be sensitive to skewness of data, therefore check if any such variables are present.</p>
+<h2 id="Preparing-the-data">Preparing the data<a class="anchor-link" href="#Preparing-the-data">&#182;</a></h2><h3 id="Transforming-skewed-continuous-features">Transforming skewed continuous features<a class="anchor-link" href="#Transforming-skewed-continuous-features">&#182;</a></h3><p>Some algorithms may be sensitive to skewness, so let's identify such variables.</p>
 
 </div>
 </div>
@@ -13624,7 +13624,7 @@ AQEAALQ9AGaz6XodUMKrAAAAAElFTkSuQmCC
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Apply logarithmic transformation to remove the skewness.</p>
+<p>Here I apply logarithmic transformation to remove the skewness.</p>
 
 </div>
 </div>
@@ -13959,7 +13959,7 @@ SZIkqbX/Dw7mqWDp/pY1AAAAAElFTkSuQmCC
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Normalizing-numerical-features">Normalizing numerical features<a class="anchor-link" href="#Normalizing-numerical-features">&#182;</a></h3><p>Normalizing numerical features because some algorithms may need it to perform well.</p>
+<h3 id="Normalizing-numerical-features">Normalizing numerical features<a class="anchor-link" href="#Normalizing-numerical-features">&#182;</a></h3><p>Let's normalize numerical features because some algorithms may need it to perform well.</p>
 
 </div>
 </div>
@@ -14126,8 +14126,8 @@ SZIkqbX/Dw7mqWDp/pY1AAAAAElFTkSuQmCC
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Data-pre-processing">Data pre-processing<a class="anchor-link" href="#Data-pre-processing">&#182;</a></h3><p>Use one-hot encoding for categorical variables.</p>
-<p>Transform the outcome variable, so that income above $50k is 1, otherwise it is 0.</p>
+<h3 id="Data-pre-processing">Data pre-processing<a class="anchor-link" href="#Data-pre-processing">&#182;</a></h3><p>Here I use one-hot encoding for categorical variables.</p>
+<p>I also want to transform the outcome variable into a binary variable, so that income above $50k is 1, otherwise it is 0.</p>
 
 </div>
 </div>
@@ -14174,8 +14174,8 @@ SZIkqbX/Dw7mqWDp/pY1AAAAAElFTkSuQmCC
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Shuffle-and-split-data">Shuffle and split data<a class="anchor-link" href="#Shuffle-and-split-data">&#182;</a></h3><p>Now all categorical variables have been converted into numerical features, and all numerical features have been normalized. 
-It's time to split split the data into training and test sets in ratio 80:20.</p>
+<h3 id="Shuffle-and-split-data">Shuffle and split data<a class="anchor-link" href="#Shuffle-and-split-data">&#182;</a></h3><p>Now all categorical variables are converted into numerical features, and all numerical features are normalized. 
+It's time to split the data into training set and test set in ratio 80:20.</p>
 
 </div>
 </div>
@@ -14227,7 +14227,7 @@ Testing set has 9045 samples.
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="Evaluating-model-performance">Evaluating model performance<a class="anchor-link" href="#Evaluating-model-performance">&#182;</a></h2><p>In this section, three different algorithms will be investigated to determine which one is best. The fourth <em>naive</em> model will be used to compare models against.</p>
+<h2 id="Evaluating-model-performance">Evaluating model performance<a class="anchor-link" href="#Evaluating-model-performance">&#182;</a></h2><p>In this section, I am going to investigate three different algorithms to determine which one is best. I will use the fourth <em>naive</em> model to compare models against.</p>
 
 </div>
 </div>
@@ -14235,10 +14235,10 @@ Testing set has 9045 samples.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Metrics-and-the-naive-predictor">Metrics and the naive predictor<a class="anchor-link" href="#Metrics-and-the-naive-predictor">&#182;</a></h3><p><em>CharityML</em>, equipped with their research, knows individuals that make more than \$50,000 are most likely to donate to their charity. Because of this, *CharityML* is particularly interested in predicting who makes more than \$50,000 accurately.</p>
-<p>The distribution of income variable is skewed, about 3/4 of individuals do not ear nore than $50 000. That is why using <em>accuracy</em> as a metric of evaluation would not be good. From <em>CharityML</em> perspective, it would be important to identify as many postives as possible (<em>recall</em> metric) while also to be accurate in positive predicitons (<em>precision</em> metric). This way, organization will reach as many out of potential donors as possible (<em>recall</em>) while also reduce the cost of mail by minimizing the number of false positives (<em>precision</em>).</p>
-<p>For convenience <strong>F-beta score</strong> metric can be used, as it is a harmonic average of <em>recall</em> and <em>precison</em>. With <strong>beta = 0.5</strong> more emphasis will be put on precision. In <em>CharityML</em> context it means that more emphasis is put on optimizing the cost of mail.</p>
-<p>The <strong>naive predictor</strong> will be the model that makes a naive assumption that every individual has income below $50 000. This simple model will have a pretty good accuracy of about 75%, but in problem context will also make no sense, as no people would be identified as potential donors to the charity.</p>
+<h3 id="Metrics-and-the-naive-predictor">Metrics and the naive predictor<a class="anchor-link" href="#Metrics-and-the-naive-predictor">&#182;</a></h3><p><em>CharityML</em> did its own research and knows that individuals who make more than \$50,000 are most likely to donate. This makes the company particularly interested in predicting who makes more than \\$50,000.</p>
+<p>The distribution of income variable is skewed, about 3/4 of individuals do not earn more than \$50,000. In this situation using <em>accuracy</em> metric for evaluation wouldn't be good. For the company, it would be important to identify as many postives as possible (<em>recall</em>) while also to be accurate in positive predicitons (<em>precision</em>). This way, organization will reach as many out of potential donors as possible (<em>recall</em>) while also reduce the cost of mail by minimizing the number of false positives (<em>precision</em>).</p>
+<p>For convenience, I will use <em>F-beta score</em> metric , as it is a harmonic average of <em>recall</em> and <em>precison</em>. I choose <em>beta = 0.5</em> so more emphasis will be put on precision. In this context it means that the priority is put on optimizing the cost of mail.</p>
+<p>The <em>naive predictor</em> is going to be the model that makes a naive assumption that every individual has income below $50,000. This simple model will have a pretty good accuracy of about 75%, but it will also make no sense in the company's context, as no people would be identified as potential donors to the charity.</p>
 
 </div>
 </div>
@@ -14300,7 +14300,7 @@ Testing set has 9045 samples.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Supervised-learning-models">Supervised learning models<a class="anchor-link" href="#Supervised-learning-models">&#182;</a></h3><p>Here are three models selected for the problem.</p>
+<h3 id="Supervised-learning-models">Supervised learning models<a class="anchor-link" href="#Supervised-learning-models">&#182;</a></h3><p>Here are three models that I have pre-selected for the problem.</p>
 
 </div>
 </div>
@@ -14310,7 +14310,7 @@ Testing set has 9045 samples.
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Logistic regression with L2 regularization</strong></p>
 <ul>
-<li>Real world application</li>
+<li>Example real world application</li>
 </ul>
 <p><em>Predicting probability of survival among patinets suffering from a given disease based on their individual features.</em></p>
 <ul>
@@ -14320,9 +14320,9 @@ Testing set has 9045 samples.
 <ul>
 <li>When it performs poorly?</li>
 </ul>
-<p><em>It performs poorly when the response variable contains more than two classes. It is sensitive to collinearity and performs poorly if collinear variables are present. It doesn't perform well when the number of dimenensions is high. Both collinearity and high number of features can be countered with L2 regularization.</em></p>
+<p><em>It performs poorly when the response variable contains more than two classes. It is sensitive to collinearity and performs poorly if collinear variables are present. It doesn't perform well when the number of dimensions is high. Both collinearity and high number of features can be countered with L2 regularization.</em></p>
 <ul>
-<li>What makes the model a good candidate given data?</li>
+<li>What makes the model a good candidate considering this data?</li>
 </ul>
 <p><em>The response variable is binary. As a high bias, low variance model it should generalize well if linear assumption is not far off. And with this type of data, linear assumption should not be far from the truth.</em></p>
 
@@ -14334,7 +14334,7 @@ Testing set has 9045 samples.
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Naive Bayes</strong></p>
 <ul>
-<li>Real world application</li>
+<li>Example real world application</li>
 </ul>
 <p><em>Spam filter</em></p>
 <ul>
@@ -14344,11 +14344,11 @@ Testing set has 9045 samples.
 <ul>
 <li>When it performs poorly?</li>
 </ul>
-<p><em>It makes a naive assumption that the variable are independent. Therefore it performs poorly if this assumption is far from being held.</em></p>
+<p><em>It makes a naive assumption that the variables are independent. Hence it performs poorly if this assumption is far from being held.</em></p>
 <ul>
-<li>What makes the model a good candidate given data?</li>
+<li>What makes the model a good candidate considering this data?</li>
 </ul>
-<p><em>One-hot encoding adds many new variables, a big part of them may have weak correlation with the income. At the same time the assumption of independent variables is not of crucial importance here.</em></p>
+<p><em>One-hot encoding adds many new variables, a big part of them may have weak correlation with the income. At the same time the assumption of independent variables is not of crucial importance here - it is not the case where considering any two variables together changes totally their individual meaning.</em></p>
 
 </div>
 </div>
@@ -14358,7 +14358,7 @@ Testing set has 9045 samples.
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Random forest</strong></p>
 <ul>
-<li>Real world application</li>
+<li>Example real world application</li>
 </ul>
 <p><em>It is widely used to tackle regression and classification problems.</em></p>
 <ul>
@@ -14368,9 +14368,9 @@ Testing set has 9045 samples.
 <ul>
 <li>When it performs poorly?</li>
 </ul>
-<p><em>Decision tree has a tendency to overfit. Random Forest uses ensemble methods which makes the model difficult to interpret.</em></p>
+<p><em>Decision tree has a tendency to overfit. To counter this, random forest uses ensemble methods which at the same time make the model difficult to interpret.</em></p>
 <ul>
-<li>What makes the model a good candidate given data?</li>
+<li>What makes the model a good candidate considering this data?</li>
 </ul>
 <p><em>The interest is in prediction, not interpretation, which makes the model a good candidate.</em></p>
 
@@ -15267,9 +15267,9 @@ SZLUmQWEJEmSpM4sICRJkiR1ZgEhSZIkqbP/D7rVCeCeoRINAAAAAElFTkSuQmCC
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Choosing-the-best-model">Choosing the best model<a class="anchor-link" href="#Choosing-the-best-model">&#182;</a></h3><p>The most important metric is the F-score on the test data after training on the full dataset. <em>Logistic regression</em> and <em>Random forest</em> performed on the equal level of about 0.7. The performance of <em>Naive Bayes</em> is poor and its score is only about 0.4. Because the higher the score the better, <em>Naive Bayes</em> can't be considered as the best model.</p>
-<p>When it comes to computational efficiency, <em>Logistic regression</em> is better than <em>Random forest</em> in training and prediction, because it took less time. What may be the most important difference between these two models it is their fit to the data. <em>Random forest</em> model is overfitted, because its F-score on the trainig set is about 0.95 compared to 0.7 on the test set. <em>Logistic regression</em> seems to be a good model, because the F-score on both sets is at the same level.</p>
-<p>The best model is <strong>Logistic Regression</strong>.</p>
+<h3 id="Choosing-the-best-model">Choosing the best model<a class="anchor-link" href="#Choosing-the-best-model">&#182;</a></h3><p>The most important metric here is the test F-score on the full training set. <em>Logistic regression</em> and <em>random forest</em> performed on the equal level of about 0.7. The performance of <em>Naive Bayes</em> is poor and its score is only about 0.4. Because the higher the score the better, I can exclude the possibility that <em>Naive Bayes</em> is the best model.</p>
+<p>When it comes to computational efficiency, <em>logistic regression</em> is better than <em>random forest</em> in training and prediction, because it took less time. The most important difference between these two models may be their fit to the data. <em>Random forest</em> model is overfitted, because its F-score on the trainig set is about 0.95 compared to 0.7 on the test set. <em>Logistic regression</em> seems to be a good model, because the F-score on both sets is at the same level.</p>
+<p>Cosindering all of this, I select <strong>Logistic Regression</strong> as the best model on this data.</p>
 
 </div>
 </div>
@@ -15277,8 +15277,8 @@ SZLUmQWEJEmSpM4sICRJkiR1ZgEhSZIkqbP/D7rVCeCeoRINAAAAAElFTkSuQmCC
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Describing-the-model-in-layman's-terms">Describing the model in layman's terms<a class="anchor-link" href="#Describing-the-model-in-layman's-terms">&#182;</a></h3><p>Logistic regression model takes on values of all the features of an individual and outputs the probability (from 0% to 100%) that he or she has the income of over \$50 000. During training we find the most effective threshold, e.g. 0.7. *If the resulting probability is at least 0.7, the model will predict that the individual earns more than \\$50 000. If not, it will predict otherwise.*</p>
-<p>In the result of training the model, we end up with a mathematical formula. It means that we can make a prediction for an individual quickly, just by substituting x-es with real numbers. Having a formula is even more important - it means that we can understand the relation between certain features and the prediction. E.g. (values are made up) <em>On average, being a 1 year older, makes an individual 5% more likely to have income of above \$50 000</em>.</p>
+<h3 id="Describing-the-model-in-layman's-terms">Describing the model in layman's terms<a class="anchor-link" href="#Describing-the-model-in-layman's-terms">&#182;</a></h3><p>Logistic regression model takes values of all the person's features as an input and outputs the probability (from 0% to 100%) that he or she has the income of over $50,000. During training we find the most effective threshold, let's say 0.7. It means that *if the resulting probability is at least 0.7, the model will predict that an individual earns more than \\$50,000. If not, it will predict otherwise.*</p>
+<p>After training we end up with a mathematical formula. It means that we can make a prediction for an individual quickly, just by substituting x-es with real numbers. Having a formula is even more important - it means that we can understand the relation between certain features and the prediction. E.g. (values are made up) <em>On average, being a 1 year older, makes an individual 5% more likely to have income above \$50,000</em>.</p>
 
 </div>
 </div>
@@ -15398,7 +15398,7 @@ Best set of parameters
 </tr>
 </tbody>
 </table>
-<p>Compared to the initial model, the optimized model is a bit better when it comes to the metrics. It has <em>accuracy</em> value higher by 0.0006 and <em>F-beta score</em> higher by 0.0017. There was not much room left for optimizng the model's parameters.</p>
+<p>When I compare the metrics, the optimized model is a bit better than the initial model. Its <em>accuracy</em> value is higher by 0.0006 and <em>F-beta score</em> is higher by 0.0017. This is an improvement, but tiny. It indicates that there was not much room left for optimizng the model's parameters.</p>
 
 </div>
 </div>
@@ -15407,13 +15407,13 @@ Best set of parameters
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="Feature-importance">Feature importance<a class="anchor-link" href="#Feature-importance">&#182;</a></h2><h3 id="Initial-guess">Initial guess<a class="anchor-link" href="#Initial-guess">&#182;</a></h3><p>To understand the relationship between the features and the result better, it is helpful to identify the small subset of features that influence the response variable the most. Based on the 13 features in the data, supposedly the features that influence the individual income the most are in that order:</p>
+<h2 id="Feature-importance">Feature importance<a class="anchor-link" href="#Feature-importance">&#182;</a></h2><h3 id="Initial-guess">Initial guess<a class="anchor-link" href="#Initial-guess">&#182;</a></h3><p>Let's understand the relationship between the features and the result better. I want to identify the small subset of features that influence the outcome the most. Out of 13 features in the dataset, I suppose that the most important ones might be (in that order):</p>
 <ul>
-<li>education (well educated people should earn more), </li>
-<li>age (people of middle age tend to have the highest income), </li>
-<li>occupation (salaries are directly linked with it)</li>
-<li>race (influences access to education and discrimination on the job market)</li>
-<li>sex (in numerous surveys women are reported to earn less)</li>
+<li>education <em>(well educated people should earn more)</em>, </li>
+<li>age <em>(people of middle age tend to have the highest income)</em>, </li>
+<li>occupation <em>(salaries are directly linked with it)</em>,</li>
+<li>race <em>(influences access to education and discrimination on the job market)</em>,</li>
+<li>sex <em>(in numerous surveys women are reported to earn less on average)</em>.</li>
 </ul>
 
 </div>
@@ -15763,12 +15763,12 @@ kZRRACgiIiKSMgoARURERFJGAaCIiIhIyigAFBEREUkZBYAiIiIiKaMAUERERCRl/h+Z8Rxh+97A
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Initial guess was right when it comes to the most important feature, <em>education</em>. Variable <em>age</em> is in the top 5 too, but not on the second place as it was guessed but on fourth.</p>
-<p>The remainig important features are:</p>
+<p>I was right with my initial guess when it comes to the most important feature, <em>education</em>. Variable <em>age</em> is in the top 5 too, but not on the second place as I predcited but on fourth.</p>
+<p>Let's look at the remaining most important features and try to find the link between them and the income:</p>
 <ul>
-<li>hours-per-week (people who work full-time tend to earn more than part-time workers, people who work over-time tend to earn extra)</li>
-<li>capital-gain (people who are high-earners should accumulate significant amounts of money)</li>
-<li>capital-loss (people in the low-earners group or struggling financially probably fall into this group)</li>
+<li>hours-per-week <em>(people who work full-time tend to earn more than part-time workers, people who work over-time tend to earn extra)</em>,</li>
+<li>capital-gain <em>(people who are high-earners should accumulate significant amounts of money)</em>,</li>
+<li>capital-loss <em>(people in the low-earners group or struggling financially probably fall into this group)</em>.</li>
 </ul>
 
 </div>
@@ -15777,7 +15777,7 @@ kZRRACgiIiKSMgoARURERFJGAaCIiIhIyigAFBEREUkZBYAiIiIiKaMAUERERCRl/h+Z8Rxh+97A
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Feature-selection">Feature selection<a class="anchor-link" href="#Feature-selection">&#182;</a></h3><p>Compare the best model with its less complex version based on the five most important features.</p>
+<h3 id="Feature-selection">Feature selection<a class="anchor-link" href="#Feature-selection">&#182;</a></h3><p>Now I am going to compare the optimized model with its less complex version, containing only the five most important features.</p>
 
 </div>
 </div>
@@ -15843,7 +15843,7 @@ F-score on testing data: 0.5881
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Effects-of-feature-selection">Effects of feature selection<a class="anchor-link" href="#Effects-of-feature-selection">&#182;</a></h3><p>The final model compared to the less complex model is significantly better. It scores by almost 0,04 higher in <em>accuracy</em> value and what's most important, by almost 0.10 higher in <em>f-beta score</em>. While the results are surprisingly good after reduction of complexity from initial 13 to reduced number of 5 features, use of more complex model is justified.</p>
+<h3 id="Effects-of-feature-selection">Effects of feature selection<a class="anchor-link" href="#Effects-of-feature-selection">&#182;</a></h3><p>The final model is significantly better than the less complex model. It scores by almost 0.04 higher in <em>accuracy</em> value and what's more important, by almost 0.10 higher in <em>f-beta score</em>. The results are surprisingly good after reduction from initial 13 to the most important 5 features. It indicates that most of the information about a person's income is explained by these 5 variables. Never the less, the results leave no doubt and justify the use of the full model.</p>
 
 </div>
 </div>
