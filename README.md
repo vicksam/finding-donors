@@ -22,9 +22,9 @@ Company reports that most of its donors have income above $50,000. The goal then
 
 ## How to use
 
-To take a look at the notebook, just click on `finding-donors.ipynb` and it should open automatically.
+To take a look at the notebook, just click on `finding_donors.ipynb` and it should open automatically.
 
-Alternatively you can download the file `finding-donors.html` and open it in your browser to see the results.
+Alternatively you can download the file `finding_donors.html` and open it in your browser to see the results.
 
 ## Dataset
 
